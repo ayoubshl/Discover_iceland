@@ -1,0 +1,367 @@
+/******************************************** general css *****************************************************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(198deg, 100%, 6%);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid hsl(198deg, 100%, 6%);
+  border-radius: 50px;
+  background-color: hsl(167deg, 82%, 65%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(198deg, 100%, 6%);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+
+li {
+  list-style: none;
+}
+/**********************************************header styling************************************************/
+
+.primary-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 3%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 1rem 2rem;
+  z-index: 9999;
+}
+
+.primary-header .left-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primary-header .middle-part img {
+  width: 50px;
+  filter: grayscale(1) invert(1);
+}
+
+.primary-header .left-part i {
+  font-size: 30px;
+}
+
+.primary-header .middle-part .logo {
+  display: none;
+}
+
+.primary-header .middle-part .logo h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+
+.primary-header .middle-part .logo h1 span {
+  color: hsl(167deg, 82%, 65%);
+  letter-spacing: 2px;
+}
+
+.primary-header .right-part .navbar {
+  opacity: 0;
+  position: absolute;
+  top: -500px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 1.5rem;
+  letter-spacing: 1px;
+  background-color: hsl(0deg, 0%, 10%);
+  transition: all 1000ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding: 1rem;
+}
+
+.primary-header .right-part .navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.primary-header .right-part .navbar ul li a {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+  font-weight: 500;
+  transition: all 500ms ease-in-out;
+}
+
+.primary-header .right-part .navbar ul li a:hover {
+  color: hsl(167deg, 82%, 65%);
+}
+.primary-header {
+  padding: 1rem 6rem;
+  gap: 2rem;
+}
+
+.primary-header .left-part .logo {
+  display: inline-block;
+}
+
+.primary-header .right-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.primary-header .right-part .navbar {
+  background-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 0;
+}
+
+.primary-header .right-part .navbar ul {
+  flex-direction: row;
+}
+
+.primary-header .right-part .navbar ul li a {
+  font-size: 1.5rem;
+}
+
+.primary-header .right-part .ham-menu {
+  display: none;
+}
+
+
+/********************************************flex countainer**************************************************************/
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/********************************************nsideNav styling ************************************************************/
+
+aside {
+  display: block;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.sidenav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 55px; /* Adjust the top value as needed */
+  height: 100vh; /* Make it full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.3);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 100; /* Ensure it appears above other elements */
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav li {
+  padding: 15px;
+  transition: background-color 0.3s;
+  font-size: 18px; /* Adjust the font size as needed */
+  position: sticky;
+  top: 0; /* Stick the li elements to the top */
+}
+
+.sidenav li:hover {
+  background-color: hsl(167deg, 82%, 65%);
+  color: #000 !important; /* Use !important to ensure the color is applied */
+}
+
+.sidenav a:hover {
+  color: #000 !important; /* Use !important to ensure the color is applied */
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: hsl(160, 23%, 97%);
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+
+/***********************************************main section styling******************************************************/
+main{
+  margin: 50px 0px;
+}
+.container {
+  display: flex;
+  height: auto; /* Adjust the height as needed */
+  width: 800px;
+}
+
+.image-section {
+  flex: 1;
+  background-color: white;
+  position: relative;
+  z-index: 2; /* To make it appear higher */
+  overflow: hidden; /* Hide overflow if the image is larger than the container */
+}
+.description-content p{
+  font-size: medium;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block; /* This ensures that the image does not have any extra spacing below it */
+}
+
+.description-section {
+  flex: 1;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.description-content {
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  width: 100%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the description content */
+}
+/************************************************video styling ***********************************************************/
+.video-container {
+  width: 300px;
+  height: 300px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  right: 0;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+/* Styling for the embedded iframe */
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+/****************************************************footer styling ******************************************************/
+
+footer {
+  background-color: hsl(0deg, 0%, 3%);
+}
+
+footer .main-container {
+  background-color: hsl(0deg, 0%, 3%);
+  color: hsl(0deg, 0%, 100%);
+  margin: 0rem auto;
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 4rem;
+}
+
+footer .main-container img {
+  filter: grayscale(1) invert(1);
+  opacity: 90%;
+  margin-bottom: 0.1rem;
+  width: 55px;
+}
+
+footer .main-container p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+footer .main-container h1 {
+  font-size: 2rem;
+  position: relative;
+}
+
+footer .main-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 1.4rem;
+  width: 28px;
+  height: 0.4rem;
+  background-color: hsl(167deg, 82%, 65%);
+  border-radius: 8px;
+  opacity: 80%;
+}
+
+footer .main-container h1::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0.8rem;
+  height: 0.4rem;
+  background-color: hsl(167deg, 82%, 65%);
+  border-radius: 8px;
+  opacity: 80%;
+}
+
+
+footer .main-container .main {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer .main-container .main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+footer .main-container .main ul li a {
+  font-size: 1.5rem;
+  transition: all 350ms ease-in-out;
+}
+
+footer .main-container .main ul li a:hover {
+  color: hsl(167deg, 82%, 65%);
+}
+
+footer .main-container .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+
+
+
+
+ 
+
+/*# sourceMappingURL=style.css.map */

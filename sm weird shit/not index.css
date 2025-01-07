@@ -1,0 +1,104 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Change the background color to your preference */
+    color: #fff; /* Change the text color to your preference */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 30px; /* Adjust the logo width as needed */
+    height: 30px; /* Adjust the logo height as needed */
+    margin-right: 10px;
+}
+
+.header-logo h1 {
+    font-size: 1.5em;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+}
+
+.right-side ul {
+    display: flex;
+    list-style: none;
+}
+
+.right-side li {
+    margin-right: 15px;
+    position: relative;
+}
+
+.right-side a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navbar styles */
+.sidenav {
+    background-color: #eee; /* Change the background color to your preference */
+    padding: 10px;
+    width: 200px; /* Adjust the sidebar width as needed */
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidenav li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.sidenav i {
+    font-size: 16px; /* Adjust the size of the SVG icons */
+    margin-right: 8px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .middle {
+        margin-top: 10px;
+    }
+
+    .right-side {
+        margin-top: 10px;
+    }
+
+    .sidenav {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust the top position based on your header height */
+        left: 0;
+        z-index: 1;
+    }
+
+    .sidenav.show {
+        display: block;
+    }
+}
