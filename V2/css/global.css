@@ -1,0 +1,127 @@
+/******************************************** General CSS *****************************************************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(198deg, 100%, 6%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/******************************************** Header Styling ************************************************/
+.primary-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0deg, 0%, 3%);
+  padding: 1rem 2rem;
+  z-index: 9999;
+}
+
+.primary-header .middle-part img {
+  width: 50px;
+  filter: grayscale(1) invert(1);
+}
+
+.primary-header .logo h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+
+.primary-header .logo h1 span {
+  color: hsl(167deg, 82%, 65%);
+  letter-spacing: 2px;
+}
+
+.primary-header .navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.primary-header .navbar ul li a {
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.primary-header .navbar ul li a:hover {
+  color: hsl(167deg, 82%, 65%);
+}
+
+/******************************************** Sidenav Styling ************************************************/
+.sidenav {
+  position: sticky;
+  top: 55px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav li {
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+
+.sidenav li:hover {
+  background-color: hsl(167deg, 82%, 65%);
+  color: #000;
+}
+
+.sidenav a {
+  font-size: 1.8rem;
+}
+
+/******************************************** Footer Styling ************************************************/
+footer {
+  background-color: hsl(0deg, 0%, 3%);
+  padding: 2rem 0;
+}
+
+footer .main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 4rem;
+  padding: 1rem 2rem;
+}
+
+footer h1 {
+  font-size: 2rem;
+  position: relative;
+}
+
+footer h1::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 1.4rem;
+  width: 28px;
+  height: 0.4rem;
+  background-color: hsl(167deg, 82%, 65%);
+  border-radius: 8px;
+  opacity: 80%;
+}
